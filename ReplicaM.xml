@@ -8,10 +8,13 @@
           </block>
         </value>
         <next>
-          <block type="oled_cleardisplay" id="13"></block>
+          <block type="oled_cleardisplay" id="13">
+            <next>
+              <block type="movement_stop" id="4"></block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
   </block>
-  <block type="movement_stop" id="4" x="49" y="286"></block>
 </xml>
