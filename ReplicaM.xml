@@ -12,10 +12,11 @@
             <next>
               <block type="movement_stop" id="66">
                 <next>
-                  <block type="controls_repeat" id="17" inline="true">
-                    <value name="TIMES">
-                      <block type="math_number" id="18">
-                        <field name="NUM">20</field>
+                  <block type="controls_whileUntil" id="96" inline="false">
+                    <field name="MODE">UNTIL</field>
+                    <value name="NUMBER">
+                      <block type="sensor_button" id="109">
+                        <field name="OBJECT">ENTER</field>
                       </block>
                     </value>
                     <statement name="DO">
