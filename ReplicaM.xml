@@ -12,23 +12,23 @@
             <next>
               <block type="movement_stop" id="66">
                 <next>
-                  <block type="controls_whileUntil" id="96" inline="false">
-                    <field name="MODE">UNTIL</field>
-                    <value name="NUMBER">
-                      <block type="sensor_button" id="109">
-                        <field name="OBJECT">DOWN</field>
-                      </block>
-                    </value>
-                    <statement name="DO">
-                      <block type="movement_forward" id="76">
+                  <block type="movement_forward" id="76">
+                    <next>
+                      <block type="robot_delay" id="78" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="80">
+                            <field name="NUM">5000</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="robot_delay" id="78" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="80">
-                                <field name="NUM">250</field>
+                          <block type="controls_whileUntil" id="96" inline="false">
+                            <field name="MODE">UNTIL</field>
+                            <value name="NUMBER">
+                              <block type="sensor_button" id="109">
+                                <field name="OBJECT">DOWN</field>
                               </block>
                             </value>
-                            <next>
+                            <statement name="DO">
                               <block type="oled_cleardisplay" id="19">
                                 <next>
                                   <block type="oled_drawtext" id="20">
@@ -199,13 +199,13 @@
                                   </block>
                                 </next>
                               </block>
+                            </statement>
+                            <next>
+                              <block type="movement_stop" id="56"></block>
                             </next>
                           </block>
                         </next>
                       </block>
-                    </statement>
-                    <next>
-                      <block type="movement_stop" id="56"></block>
                     </next>
                   </block>
                 </next>
